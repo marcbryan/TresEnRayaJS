@@ -30,15 +30,17 @@ $(document).ready(function () {
     
             board[coordX][coordY] = jugadorActual.char;
 
-            if (turn == 9)
-                console.log("final");
-
             if (haGanado(jugadorActual.char))
-                showAlert("Enhorabuena!", "Ha ganado el jugador " + jugadorActual.number + "!");
+                showAlert("Enhorabuena!", "<p>Ha ganado el jugador " + jugadorActual.number + "!</p><p>Pulsa F5 o aceptar para jugar de nuevo</p>");
             else
             {
-                changePlayer();
-                assignPlayerData();
+                if (turn == 9)
+                    showAlert("Empate", "<p>No ha ganado ningún jugador</p><p>Pulsa F5 o aceptar para jugar de nuevo</p>")
+                else
+                {
+                    changePlayer();
+                    assignPlayerData();
+                }
             }
 
             turn++;
