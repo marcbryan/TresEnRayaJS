@@ -1,0 +1,59 @@
+.container > h2 {
+    padding-top: 0.5rem;
+}
+
+.container > h2, .container > h5 {
+    text-align: center;
+}
+
+.square {
+    width: 180px;
+    height: 180px;
+    background-color: floralwhite;
+    border: 1px solid;
+}
+
+.square > span {
+    font-size: 100px;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+#btnShowModal {
+    visibility: hidden;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-body > p {
+    margin-bottom: 0.5em;
+}
+
+.modal-body > p:last-child {
+    margin-bottom: 0;
+}
+
+/** Versión móvil **/
+@media (max-width: 600px) {
+    .square {
+        width: 90px;
+        height: 90px;
+    }
+
+    .square > span {
+        font-size: 40px;
+    }
+}
