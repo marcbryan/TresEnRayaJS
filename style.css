@@ -9,8 +9,23 @@
 .square {
     width: 180px;
     height: 180px;
-    background-color: floralwhite;
     border: 1px solid;
+}
+
+.row:first-child > .square {
+    border-top-style: none;
+}
+
+.row > .square:first-child {
+    border-left-style: none;
+}
+
+.row > .square:last-child {
+    border-right-style: none;
+}
+
+.row:last-child > .square {
+    border-bottom-style: none;
 }
 
 .square > span {
@@ -24,6 +39,14 @@
 
 .blue {
     color: blue;
+}
+
+.bg-lightblue {
+    background-color: lightblue;
+}
+
+.bg-lightred {
+    background-color: lightcoral;
 }
 
 #btnShowModal {

@@ -22,11 +22,11 @@ $(document).ready(function () {
         let coordY = span.data("coordY");
 
         let char = board[coordX][coordY];
-
-        if (board[coordX][coordY] == "")
+        if (char == "")
         {
             span.text(jugadorActual.char);
             span.addClass(jugadorActual.color);
+            span.parent().addClass("bg-light" + jugadorActual.color)
     
             board[coordX][coordY] = jugadorActual.char;
 
